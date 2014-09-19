@@ -45,7 +45,7 @@ body {
 	user-select: none;
 	overflow: hidden;
 	position:relative;
-	background-color: #EDEDED;
+	background-color: #fff;
 	min-height:100%;
 	
 	
@@ -75,8 +75,10 @@ body {
 	padding-left:1em;
 	padding-right:1px;
 	display:block;
-	border-top:1px solid #fff;
-	border-bottom:1px solid #CCC;
+	
+    border-top: 1px solid #fff;
+	
+    border-bottom:1px solid #CCC;
 	
     background-image:url('graphics/more_disclosure.png');
     background-position:right center;
@@ -93,7 +95,7 @@ body {
 /*ViewNavigator Styles*/
 
 .viewNavigator_header {
-    background:#444;
+    background: #fade11;
     color:#444;
 }
 
@@ -111,7 +113,7 @@ body {
     color: rgba(0,0,0,0);
     height:35px;
     box-shadow: 0 0 0 0;
-    background: #DEDEDE;
+    background: #fff;
     border:1px solid #999;
     padding:0px;
     border-radius:0px;
@@ -151,7 +153,7 @@ body {
 
 .viewNavigator_contentHolder > div:first-child {
     min-height:100%;
-    background:#EDEDED;
+    background: white;
     /*background-image:url('graphics/wheat_bg.png');
     background-position: top left;
     background-repeat:repeat;*/
@@ -175,8 +177,8 @@ body {
 .button {
     padding:.5em;
     cursor:pointer;
-    border:1px solid #999;
-    background-color: #AAA;
+    border: 1px solid #000;
+    background-color: #d0b712;
     color: white;
     text-decoration:none;
 }
@@ -235,7 +237,7 @@ body {
     text-decoration: none;
     color:#444;
     font-size:1em;
-    background:rgba(230,230,230,0.85);
+    background: #fff;
 }
 
 #defaultView a:active {

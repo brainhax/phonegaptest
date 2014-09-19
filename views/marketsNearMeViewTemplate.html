@@ -1,13 +1,13 @@
 
 <div id="marketsNearMeView">
     <div class="padded heading">
-        Markets within 100 miles: 
+        ATMs within 3 Kilometer: 
         <a id="mapButton" class="button right">MAP VIEW</a>
     </div>
     <div class="data-list">
         <ul>
             {{#markets}}
-            <li index="{{index}}"><strong>{{marketName}}</strong><div class="subtext">{{distance}} miles</div></li>
+            <li index="{{index}}"><strong>{{marketName}}</strong><div class="subtext">{{distance}} kilometer</div></li>
             {{/markets}}
         </ul>
     </div>

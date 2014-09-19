@@ -106,13 +106,14 @@ function onNearbyViewClick( event ) {
     window.viewNavigator.pushView( view );
     
     //acquire location
-    navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoError, { maximumAge: 60000, timeout: 5000, enableHighAccuracy: true });
+    navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoError, { maximumAge: 600, timeout: 5000, enableHighAccuracy: true });
     event.stopPropagation();
     return false;
 }
 
 var onGeoSuccess = function(position) {
-   /* console.log('Latitude: '          + position.coords.latitude          + '\n' +
+	/*
+    console.log('Latitude: '          + position.coords.latitude          + '\n' +
           'Longitude: '         + position.coords.longitude         + '\n' +
           'Altitude: '          + position.coords.altitude          + '\n' +
           'Accuracy: '          + position.coords.accuracy          + '\n' +
@@ -168,7 +169,7 @@ function filterMarketsByGeo( latitude, longitude ) {
         var lon2 = parseFloat(longitude);
         //console.log( lat1, lon1, lat2, lon2 );
         var d = distance( lat1, lon1, lat2, lon2 );
-        if ( d < 100 ){
+        if ( d < 3 ){
             result.push( markets[i] );
         }
         
@@ -229,7 +230,7 @@ function showMarketDetailsFromMapClick( index ) {
     
 function showMarketDetails( item ) { 
     var market = arrayToMarketObject(item);
-    var view = { title: "Market Detail",
+    var view = { title: "Location Detail",
              backLabel: (isTablet() ? "Back" : " "),
              view: viewAssembler.marketDetailsView( market )
            };
@@ -388,7 +389,7 @@ function viewInMap( index ) {
 function getDirections( index ) {
     var market = arrayToMarketObject( markets[index] );
 
-    var result=confirm("You will leave the Farmers Market Finder App.  Continue?");
+    var result=confirm("You will leave the Saudi ATM Finder App.  Continue?");
     if (result==true) {
         
         var win = navigator.userAgent.search( "Windows Phone" ) >= 0;
@@ -413,6 +414,7 @@ function getDirections( index ) {
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
+
    document.addEventListener("backbutton", onBackKey, false);
 }
 
